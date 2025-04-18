@@ -1,0 +1,42 @@
+<% include head %>
+</head>
+<body>
+	<% include navbar %>
+    <div class="container">
+        <div class="movie-card">
+            <div class="movie-card-header">
+                <img src="<%= imageBaseUrl + movieDetails.backdrop_path %>" alt="Backdrop" class="movie-backdrop">
+                <div class="movie-title-container">
+                    <h1 class="movie-title"><%= movieDetails.original_title %></h1>
+                    <p class="movie-tagline"><%= movieDetails.tagline %></p>
+                </div>
+            </div>
+            <div class="movie-card-body">
+                <div class="movie-poster">
+                    <img src="<%= imageBaseUrl + movieDetails.poster_path %>" alt="Poster" class="poster-image">
+                </div>
+                <div class="movie-details">
+                    <p><strong>Overview:</strong> <%= movieDetails.overview %></p>
+                    <p><strong>Release Date:</strong> <%= movieDetails.release_date %></p>
+                    <% const genreList = movieDetails.genres.map(genre => genre.name).join(', '); %>
+                    <p><strong>Genres:</strong> <%= genreList %></p>
+                    <p><strong>Runtime:</strong> <%= movieDetails.runtime %> minutes</p>
+                    <p><strong>Status:</strong> <%= movieDetails.status %></p>
+                    <p><strong>Rating:</strong> <%= movieDetails.vote_average.toFixed(1) %> / 10 (<%= movieDetails.vote_count %> votes)</p>
+                    <p><strong>Revenue:</strong> $ <%= movieDetails.revenue %></p>
+                    <p><strong>Budget:</strong> $<%= movieDetails.budget %></p>
+                    <p><strong>Homepage:</strong> <a href="<%= movieDetails.homepage %>" target="_blank">Visit the Official Website</a></p>
+                </div>
+            </div>
+            <div class="movie-card-footer">
+                <h3>Production Companies:</h3>
+                <div class="production-companies">
+                    <% movieDetails.production_companies.forEach(company => { %>
+                        <img src="<%= imageBaseUrl + company.logo_path %>" alt="<%= company.name %>" class="company-logo" />
+                   <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

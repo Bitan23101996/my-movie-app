@@ -1,0 +1,139 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar-right{
+  margin-right: 10px;
+}
+
+.poster img{
+  width: 90%;
+  text-align: center;
+  margin: 10px 5% 10px;
+}
+
+#search-form input{
+  margin: 8px 0px;
+  padding: 5px;
+}
+
+.form-group select{
+  min-width: 150px;
+}
+
+.single-movie-title, .overview-header{
+  font-family: 'Metamorphous', cursive;
+}
+
+.overview-header{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.single-movie-overview{
+  font-family: 'Swanky and Moo Moo', cursive;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* Main card styling */
+.movie-card {
+    background-color: #fff;
+    /* width: 80%;
+    max-width: 900px; */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Header with backdrop image and title */
+.movie-card-header {
+    position: relative;
+    text-align: center;
+}
+
+.movie-backdrop {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.movie-title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.movie-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.movie-tagline {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Main body of the card with movie details */
+.movie-card-body {
+    display: flex;
+    padding: 20px;
+}
+
+.movie-poster {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.poster-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details {
+    flex: 2;
+}
+
+.movie-details p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.movie-details strong {
+    color: #333;
+}
+
+/* Footer with production companies */
+.movie-card-footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.production-companies {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.company-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+}
